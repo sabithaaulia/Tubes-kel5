@@ -1,0 +1,234 @@
+/* LoginMenu */
+
+.login {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: white
+}
+.kotak{
+    width: 751px;
+    height: 1085px;
+    left: -51px; top: -20px;
+    position: absolute;
+    background: #CC0303
+}
+
+.WelcomeBack{
+    left: 166px;
+    top: 363px;
+    position: absolute;
+    color: #DADADA;
+    font-size: 78px;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 61.60px;
+    word-wrap: break-word
+}
+
+.buttonlogin{
+    width: 365px;
+    height: 64px;
+    padding-top: 20px;
+    padding-bottom: 21px;
+    left: 886px;
+    top: 738px;
+    position: absolute;
+    background: #CC0303;
+    border-radius: 8px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex
+}
+
+.Buttontextlogin{
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 22.40px;
+    word-wrap: break-word
+}
+
+.OutlineDisable{
+    width: 366px;
+    height: 59px;
+    /* padding-left: 80px;
+    padding-right: 80px;  */
+    padding-top: 12.80px;
+    padding-bottom: 5px;
+    left: 883px;
+    top: 433px;
+    position: absolute;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px #BDBDBD solid;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    display: inline-flex
+}
+
+.OutlineDisable2{
+    width: 366px;
+    height: 59px;
+    /* padding-left: 80px;
+    padding-right: 80px;  */
+    padding-top: 12.80px;
+    padding-bottom: 5px;
+    left: 883px;
+    top: 549px;
+    position: absolute;
+    border-radius: 8px;
+    border: 1px #BDBDBD solid;
+
+
+}
+
+.TelutenGmailCom{
+    width: 163px;
+    height: 27px;
+    left: 906px;
+    top: 450px;
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 500;
+    line-height: 22.40px;
+    word-wrap: break-word
+}
+
+
+.passwordtitik{
+    width: 70px;
+    height: 27px;
+    left: 913px;
+    top: 567px;
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 800;
+    line-height: 22.40px;
+    word-wrap: break-word
+}
+
+.WelcomeBackPleaseLoginToYourAccount{
+    width: 278px;
+    height: 52px;
+    left: 884px;
+    top: 300px;
+    position: absolute;
+    color: #AFADAD;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 500;
+    line-height: 22.40px;
+    word-wrap: break-word
+}
+
+.Password{
+    width: 83px;
+    height: 26px;
+    left: 886px;
+    top: 513px;
+    position: absolute;
+    text-align: center;
+    color: #BDBDBD;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 500;
+    line-height: 22.40px;
+    word-wrap: break-word
+}
+
+.Rectangle2{
+    width: 26px;
+    height: 28px;
+    left: 887px;
+    top: 655px;
+    position: absolute;
+    background: #CC0303;
+    border-radius: 4px
+}
+
+.IconCheck{
+    width: 18px;
+    height: 19px;
+    position: relative
+}
+.Grid{
+    width: 18px;
+    height: 19px;
+    left: 0px;
+    top: 0px;
+    position: absolute
+}
+.Mask{
+    width: 11.40px;
+    height: 8.87px;
+    left: 3.60px;
+    top: 5.07px;
+    position: absolute;
+    background: #DBDBDB
+}
+.Mask2{
+    width: 11.40px;
+    height: 8.87px;
+    left: 3.60px;
+    top: 5.07px;
+    position: absolute;
+    background: black
+}
+
+.Color{
+    width: 18px;
+    height: 19px;
+    left: 0px;
+    top: 0px;
+    position: absolute
+}
+
+.IconFillAccent{
+    width: 18px;
+    height: 19px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: #DBDBDB
+}
+
+.RememberMe{
+    width: 92px;
+    height: 27px;
+    left: 927px;
+    top: 655px;
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 12px;
+    font-family: Inter;
+    font-weight: 500;
+    line-height: 22.40px;
+    word-wrap: break-word
+}
+
+.ForgotPassword{
+    width: 114px;
+    height: 27px;
+    left: 1135px;
+    top: 654px;
+    position: absolute;
+    text-align: center;
+    color: #bdbdbd;
+    font-size: 12px;
+    font-family: Inter;
+    font-weight: 500;
+    line-height: 22.40px;
+    word-wrap: break-word
+}
