@@ -56,10 +56,10 @@ class mahasiswaController extends Controller
             'nama_tenant' => 'required',
             'deskripsi_laporan' => 'required',
         ], [
-            'nama_pelapor.required' => 'NIM wajib diisi',
-            'nama_pelapor.unique' => 'NIM yang diisikan sudah ada dalam database',
-            'nama_pelapor.required' => 'Nama wajib diisi',
-            'deskripsi_laporan.required' => 'Jurusan wajib diisi',
+            'nama_pelapor.required' => 'Nama Pelapor wajib diisi',
+            'nama_pelapor.required' => 'Nama Pelapor wajib diisi',
+
+            'deskripsi_laporan.required' => 'Deskripsi wajib diisi',
         ]);
         $data = [
             'nama_pelapor' => $request->nama_pelapor,
@@ -105,7 +105,7 @@ class mahasiswaController extends Controller
 
         $data = [
             'nama_tenant' => $request->nama_tenant,
-            'deskripsi_laporan' => $request->deskripsi_laporan, 
+            'deskripsi_laporan' => $request->deskripsi_laporan,
         ];
         mahasiswa::where('nama_pelapor', $id)->update($data);
         return redirect()->to('mahasiswa')->with('success', 'Berhasil melakukan update data');
