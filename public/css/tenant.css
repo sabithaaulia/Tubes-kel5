@@ -34,8 +34,8 @@
 .form-group input[type="tel"],
 .form-group input[type="email"],
 .form-group select {
-    width: 80%;
-    padding: 10px;
+    width: 100%;
+    padding: .5rem;
     border: 1px solid #ccc;
     border-radius: .25rem;
 }
@@ -56,7 +56,7 @@
 
 .submit-button {
     display: block;
-    width: 82%;
+    width: 100%;
     padding: .8rem;
     background-color: #ff3232;
     color: white;
