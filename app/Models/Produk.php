@@ -5,10 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Menu extends Model
+class Produk extends Model
 {
+    protected $table = 'produk'; // Menentukan nama tabel secara eksplisit
+    protected $guarded = ['id'];
     use HasFactory;
 
-    protected $table = "menu";
-    protected $fillable = ['nama_menu', 'satuan', 'harga', 'jumlah'];
+
+
 }
+

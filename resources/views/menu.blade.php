@@ -3,37 +3,87 @@
 @section('title', 'Menu')
 
 @section('content')
-<div class="menu-container">
-    <div class="product-table">
-        <h2>Menu</h2>
-        <table>
+<table>
             <thead>
                 <tr>
                     <th>No</th>
                     <th>Nama Produk</th>
+                    <th>Jenis</th>
                     <th>Harga</th>
                     <th>Jumlah</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- Contoh baris produk -->
-                @for ($i = 1; $i <= 10; $i++)
+                @foreach ($produk as $index => $item)
                 <tr>
-                    <td>{{ $i }}</td>
-                    <td>Nasgor Bawang</td>
-                    <td>Rp. 10.000</td>
+                    <td>{{ $index + 1 }}</td>
+                    <td>{{ $item->nama_produk }}</td>
+                    <td>{{ $item->jenis_produk }}</td>
+                    <td>Rp. {{ number_format($item->harga_produk, 0, ',', '.') }}</td>
+                    <td>{{ $item->jumlah_produk }}</td>
                     <td>
-                        <button class="amount-button">-</button>
-                        <input type="text" value="1" class="amount-input">
-                        <button class="amount-button">+</button>
+                        <button class="edit-button" onclick='openEditModal(@json($item))'>Edit</button>
+                        <button class="delete-button" onclick='deleteProduct({{ $item->id }})'>Hapus</button>
+                        <button class="add-to-cart-button" data-product-id="{{ $item->id }}" onclick="addToCart(this)">🛒</button>
                     </td>
-                    <td><button class="edit-button">Edit</button></td>
                 </tr>
-                @endfor
+                @endforeach
             </tbody>
         </table>
-        <button class="order-button">Buat Pesanan</button>
+
+                <!-- Modal Edit Produk -->
+        <div id="editProductModal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close" onclick="closeEditModal()">&times;</span>
+                <h2>Edit Produk</h2>
+                <form method="post">
+                    @csrf
+                    <input type="hidden" name="_method" value="PUT">
+                    <input type="hidden" id="editProductId" name="id">
+
+                    <div class="form-group">
+                        <label for="editProductName">Nama Produk</label>
+                        <input type="text" id="editProductName" name="nama_produk" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editProductType">Jenis</label>
+                        <select id="editProductType" name="jenis_produk">
+                            <option value="makanan">Makanan</option>
+                            <option value="minuman">Minuman</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editProductPrice">Harga</label>
+                        <input type="text" id="editProductPrice" name="harga_produk" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editProductQuantity">Jumlah</label>
+                        <input type="number" id="editProductQuantity" name="jumlah_produk" required>
+                    </div>
+
+                    <button type="submit" class="submit-button">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <button class="order-button">Buat Pesanan</button>
     </div>
 
-    @endsection
+
+
+@push('head')
+<link href="{{ asset('css/menu.css') }}" rel="stylesheet">
+<script src="{{ asset('js/menu.js') }}"></script>
+<script type="module" src="{{ asset('js/app.js') }}"></script>
+
+@endpush
+
+@endsection
