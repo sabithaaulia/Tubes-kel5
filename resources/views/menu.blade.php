@@ -76,14 +76,3 @@
 
     <button class="order-button">Buat Pesanan</button>
     </div>
-
-
-
-@push('head')
-<link href="{{ asset('css/menu.css') }}" rel="stylesheet">
-<script src="{{ asset('js/menu.js') }}"></script>
-<script type="module" src="{{ asset('js/app.js') }}"></script>
-
-@endpush
-
-@endsection
