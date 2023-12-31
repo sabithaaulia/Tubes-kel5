@@ -76,3 +76,95 @@
 
     <button class="order-button">Buat Pesanan</button>
     </div>
+
+    {{-- Check if session cart exists --}}
+@if(session('cart'))
+    <div class="order-cart">
+        <h3>Order Menu</h3>
+        <p>Order No. 16</p>
+        @foreach(session('cart') as $productId => $details)
+            {{-- Ensure $details is an array and has all necessary keys --}}
+            @if(is_array($details) && isset($details['name'], $details['price'], $details['quantity']))
+                <div class="menu-item">
+                    <p class="item-name">{{ $details['name'] }}</p>
+                    <p class="item-price">{{ 'Rp. ' . number_format($details['price'], 2, ',', '.') }}</p>
+                    <div class="item-controls">
+                        <button class="minus-button" onclick="updateCart({{ $productId }}, {{ max($details['quantity'] - 1, 0) }})">-</button>
+                        <input type="text" class="quantity-input" value="{{ $details['quantity'] }}">
+                        <button class="plus-button" onclick="updateCart({{ $productId }}, {{ $details['quantity'] + 1 }})">+</button>
+                        <button class="delete-button" onclick="removeFromCart({{ $productId }})">Delete</button>
+                    </div>
+                </div>
+            @endif
+        @endforeach
+        <button class="order-button" onclick="completeOrder()">Complete Order</button>
+    </div>
+@endif
+
+  
+
+    
+
+
+<!-- Modal Pembayaran -->
+<div id="paymentModal" class="modal">
+<div class="payment-modal">
+  <div class="payment-modal-header">
+    <i class="your-icon-class"></i> <!-- Replace with your actual icon class -->
+    <span>Total Pesanan</span>
+  </div>
+  <div class="payment-modal-body">
+        <div class="payment-modal-field">
+                    <label for="total">Total Pesanan</label>
+                    <input type="text" id="total" value="Rp.32.000" readonly>
+                    </div>
+                    <div class="payment-modal-field">
+                    <label for="paid">Dibayar</label>
+                    <input type="text" id="paid" value="Rp.50.000" readonly>
+                    </div>
+                    <div class="payment-modal-field">
+                    <label for="change">Kembalian</label>
+                    <input type="text" id="change" value="Rp.18.000" readonly>
+                    </div>
+                </div>
+                <div class="payment-modal-actions">
+                    <button class="payment-modal-action-button payment-modal-action-button--pay" onclick="confirmPayment()">Bayar</button>
+                    <button class="payment-modal-action-button payment-modal-action-button--cancel"onclick="closePaymentModal()">Batal</button>
+                </div>
+        </div>
+
+</div>
+
+
+        
+<!-- Modal Konfirmasi Pembayaran Berhasil -->
+<div id="successModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-payment-success">
+            <div class="checkmark-icon">✓</div>
+            <h2>Pembayaran Berhasil!</h2>
+            <div class="payment-details">
+                <p>Order #16</p>
+                <p>Total Rp.32.000</p>
+                <p>Jumlah Uang Rp.50.000</p>
+                <p>Kembalian Rp.18.000</p>
+            </div>
+            <button onclick="closeSuccessModal()">Home</button>
+            <button onclick="printReceipt()">Print</button>
+    </div>
+
+    </div>
+</div>
+
+</div>
+
+</div>
+
+@push('head')
+<link href="{{ asset('css/menu.css') }}" rel="stylesheet">
+<script src="{{ asset('js/menu.js') }}"></script>
+<script type="module" src="{{ asset('js/app.js') }}"></script>
+
+@endpush
+
+@endsection
