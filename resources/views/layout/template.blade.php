@@ -8,7 +8,7 @@
   </head>
   <body class="bg-light">
     <main class="container">
-        @include('komponen.pesan')
+
 
         @yield('konten')
     </main>

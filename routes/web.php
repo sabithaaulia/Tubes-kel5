@@ -40,10 +40,6 @@ Route::get('/debug-cart', function () {
     dd(session('cart'));
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::resource('produk', ProdukController::class);
 Route::delete('/produk/{produk}', [ProdukController::class, 'destroy']);
 Route::post('/produk', [ProdukController::class, 'store'])->name('produk.store');
