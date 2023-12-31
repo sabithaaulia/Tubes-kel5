@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\mahasiswaController;
 use App\Http\Controllers\TenantController;
 
 /*
@@ -39,6 +40,10 @@ Route::get('/debug-cart', function () {
     dd(session('cart'));
 });
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
 Route::resource('produk', ProdukController::class);
 Route::delete('/produk/{produk}', [ProdukController::class, 'destroy']);
 Route::post('/produk', [ProdukController::class, 'store'])->name('produk.store');
@@ -47,6 +52,7 @@ Route::delete('/cart/remove/{productId}', [CartController::class, 'removeFromCar
 Route::put('/cart/update/{productId}', [CartController::class, 'updateCart']);
 Route::get('/cart', [CartController::class, 'showCart']);
 Route::delete('cart/remove/{productId}', [CartController::class, 'removeFromCart']);
+Route::resource('mahasiswa', mahasiswaController::class);
 
 // Define route for deleting tenant contracts
 Route::delete('/tenant-contract/{id}', [TenantController::class, 'destroy'])->name('tenant-contract.destroy');
