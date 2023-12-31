@@ -11,7 +11,7 @@ class Produk extends Model
     protected $guarded = ['id'];
     use HasFactory;
 
-
-
+    
+    
 }
 

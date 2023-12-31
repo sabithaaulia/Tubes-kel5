@@ -280,7 +280,7 @@ table th, table td {
     margin: 10% auto; /* Posisi modal di tengah secara vertikal dan horizontal */
     text-align: center; /* Teks di tengah modal */
   }
-
+  
   .modal-payment-success .checkmark-icon {
     display: inline-block;
     width: 50px;
@@ -292,20 +292,20 @@ table th, table td {
     margin: 0 auto 10px; /* Spasi di bawah ikon ceklis */
     font-size: 24px; /* Ukuran ikon ceklis */
   }
-
+  
   /* Style untuk teks sukses pembayaran */
   .modal-payment-success h2 {
     color: #333;
     margin-bottom: 15px;
   }
-
+  
   /* Style untuk detail pembayaran */
   .modal-payment-success .payment-details {
     margin-bottom: 20px;
     line-height: 1.5; /* Spasi antar baris */
     color: #555;
   }
-
+  
   /* Style untuk tombol di modal */
   .modal-payment-success .button {
     padding: 10px 20px;
@@ -316,17 +316,17 @@ table th, table td {
     margin: 0 5px; /* Spasi antara tombol */
     cursor: pointer; /* Cursor pointer ketika hover */
   }
-
+  
   /* Style untuk tombol Home */
   .modal-payment-success .button-home {
     background-color: #007bff; /* Warna biru untuk tombol Home */
   }
-
+  
   /* Style untuk tombol Print */
   .modal-payment-success .button-print {
     background-color: #6c757d; /* Warna abu-abu untuk tombol Print */
   }
-
+  
   /* Style untuk animasi ikon ceklis */
   @keyframes fadeInCheckmark {
     0% {
@@ -342,12 +342,12 @@ table th, table td {
       transform: scale(1);
     }
   }
-
+  
   /* Tambahkan animasi ke ikon ceklis */
   .modal-payment-success .checkmark-icon {
     animation: fadeInCheckmark 0.5s ease-in-out forwards;
   }
-
+  
   /* Tambahkan media query untuk responsivitas */
   @media (max-width: 768px) {
     .modal-payment-success {
@@ -355,7 +355,7 @@ table th, table td {
       margin-top: 20%;
     }
   }
-
+  
 
   .payment-modal {
     background: #FFF;
@@ -365,7 +365,7 @@ table th, table td {
     width: 300px; /* Adjust the width as needed */
     margin: 20px auto; /* Center the modal */
   }
-
+  
   .payment-modal-header {
     font-size: 20px;
     font-weight: bold;
@@ -373,26 +373,26 @@ table th, table td {
     display: flex;
     align-items: center;
   }
-
+  
   .payment-modal-header i {
     font-size: 24px; /* Adjust size to match your icons */
     margin-right: 8px;
     color: #ff4500; /* Adjust the color to match your theme */
   }
-
+  
   .payment-modal-body {
     margin-bottom: 20px;
   }
-
+  
   .payment-modal-field {
     margin-bottom: 15px;
   }
-
+  
   .payment-modal-field label {
     display: block;
     margin-bottom: 5px;
   }
-
+  
   .payment-modal-field input {
     width: 100%;
     padding: 10px;
@@ -400,13 +400,13 @@ table th, table td {
     border: 1px solid #ddd;
     border-radius: 4px;
   }
-
+  
   .payment-modal-actions {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
   }
-
+  
   .payment-modal-action-button {
     background-color: #f44336; /* Red color for the cancel button */
     color: white;
@@ -418,15 +418,15 @@ table th, table td {
     border-radius: 4px;
     cursor: pointer;
   }
-
+  
   .payment-modal-action-button--pay {
     background-color: #4CAF50; /* Green color for the pay button */
   }
-
+  
   .payment-modal-action-button--cancel {
     background-color: #f44336; /* Red color for the cancel button */
   }
-
+  
   .delete-button {
     background-color: #f44336; /* Red */
     color: white;
@@ -435,5 +435,5 @@ table th, table td {
     cursor: pointer;
 }
 
-
+  
 

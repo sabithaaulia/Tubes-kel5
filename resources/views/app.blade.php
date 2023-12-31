@@ -10,8 +10,8 @@
     <link href="{{ asset('css/form.css') }}" rel="stylesheet">
     <link href="{{ asset('css/tenant.css') }}" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-
-
+    
+    
     @stack('head') <!-- Untuk memungkinkan view anak menambahkan script atau style tambahan di head -->
 </head>
 <body>
@@ -30,6 +30,6 @@
 
 
     @stack('scripts') <!-- Tempat untuk view anak menambahkan script tambahan -->
-
+    
 </body>
 </html>

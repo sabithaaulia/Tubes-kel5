@@ -8,7 +8,6 @@
                 <tr>
                     <th>No</th>
                     <th>Nama Produk</th>
-                    <th>Jenis</th>
                     <th>Harga</th>
                     <th>Jumlah</th>
                     <th>Action</th>
@@ -19,7 +18,6 @@
                 <tr>
                     <td>{{ $index + 1 }}</td>
                     <td>{{ $item->nama_produk }}</td>
-                    <td>{{ $item->jenis_produk }}</td>
                     <td>Rp. {{ number_format($item->harga_produk, 0, ',', '.') }}</td>
                     <td>{{ $item->jumlah_produk }}</td>
                     <td>
@@ -69,9 +67,9 @@
                 </form>
             </div>
         </div>
+
     </div>
 </div>
-
 
 
     <button class="order-button">Buat Pesanan</button>

@@ -8,6 +8,7 @@
     <div class="form-container">
         <h1 class="form-title">Tambah Produk</h1>
         <p class="form-description">Masukkan informasi produk baru di bawah ini.</p>
+
         <form action="{{ route('produk.store') }}" method="post">
             @csrf
             <div class="form-group">
@@ -38,5 +39,10 @@
     </div>
 </div>
 
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
 
 @endsection
