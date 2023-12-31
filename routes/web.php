@@ -32,3 +32,12 @@ Route::get('/products/menu', function () {
 Route::get('/products/edit', function () {
     return view('edit');
 });
+
+
+// * Location
+Route::get('/location-facilities', [LocationController::class, 'showLocation']);
+Route::get('/location-facilities/add-table', [LocationController::class, 'addTable'])->name('addTabel');
+Route::post('/location-facilities/add-table', [LocationController::class, 'submitAddTable']);
+Route::get('/location-facilities/edit-table/{id}', [LocationController::class, 'editTable']);
+Route::put('/location-facilities/edit-table/{id}', [LocationController::class, 'submitEditTable'])->name('table.update');
+Route::get('/location-facilities/delete-table/{id}', [LocationController::class, 'deleteTable'])->name('table.delete');
